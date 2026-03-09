@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div class="container">
+        <h1>Donation Form</h1>
+        <form id="donationForm">
+            <input type="text" id="storeName" placeholder="Store Name" required>
+            <input type="text" id="storeAddress" placeholder="Store Address" required>
+            <input type="text" id="storeLocation" placeholder="Store Location" required>
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="date" id="expiryDate" required>
+            <button type="submit">Add Donation</button>
+        </form>
+
+        <h2>Donation Records</h2>
+        <table id="donationsTable">
+            <thead>
+                <tr>
+                    <th>Store Name</th>
+                    <th>Store Address</th>
+                    <th>Store Location</th>
+                    <th>Item Name</th>
+                    <th>Expiry Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
