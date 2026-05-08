@@ -1,8 +1,7 @@
-// ================== CONFIG ==================
+
 const POST_URL = "https://a3pfud2yj9.execute-api.ap-south-1.amazonaws.com/dev/donations";  // API Gateway POST endpoint
 const GET_URL  = "https://a3pfud2yj9.execute-api.ap-south-1.amazonaws.com/dev/get-donations";   // API Gateway GET endpoint
 
-// ================= MATRIX BACKGROUND =================
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
@@ -29,7 +28,6 @@ function drawMatrix() {
 }
 setInterval(drawMatrix, 35);
 
-// ================= FORM SUBMISSION =================
 document.getElementById("donationForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -57,7 +55,6 @@ document.getElementById("donationForm").addEventListener("submit", async (e) => 
     }
 });
 
-// ================= LOAD DONATIONS =================
 async function loadDonations() {
     try {
         const res = await fetch(GET_URL);
@@ -81,6 +78,5 @@ async function loadDonations() {
     }
 }
 
-// Load donations on start and refresh every 5 seconds
 loadDonations();
 setInterval(loadDonations, 5000);
